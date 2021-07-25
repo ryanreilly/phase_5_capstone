@@ -110,7 +110,55 @@ Insert picture of application
 **Gather more images** There were a good amount of images for this project, but it would be nice to get even more unique images. Natural disasters happen every year, so it would be nice to update the model with pictures of more recent natural disasters.  
 
 
-
-
+### Repo Structure
+```
+├── data
+│   ├── consolidated_disaster_types_dev_final.tsv
+│   ├── consolidated_disaster_types_test_final.tsv
+│   ├── consolidated_disaster_types_train_final.tsv
+│   └── 
+|
+├── images
+│   ├── disaster_1.jpeg
+│   ├── classes_count.png
+│   ├── distribution_splits.png
+│   ├── sample_images.png
+│   ├── FSM_confusion.png
+│   ├── FSM_training_loss.png
+│   ├── FSM_training_classification_report.png
+│   ├── 2ndModel_confusion.png
+│   ├── 2ndModel_training_loss.png
+│   ├── 2ndModel_training_classification_report.png
+│   ├── vgg_confusion.png
+│   ├── vgg_training_loss.png
+│   ├── vgg_training_classification_report.png
+│   ├── resnet_confusion.png
+│   ├── resnet_training_loss.png
+│   ├── resnet_training_classification_report.png
+│   ├── dense_confusion.png
+│   ├── dense_training_loss.png
+│   └──  dense_training_classification_report.png
+|
+├── src
+│   └── preprocessing.py
+|
+├── working_notebooks
+│   ├── ryan_working_notebook.ipynb
+│   ├── image_divider.ipynb
+│   └── twitter_scraping.ipynb
+│
+├── transfer_learning_notebooks
+│   ├── DenseNet121_model.ipynb
+│   ├── ResNet50_model.ipynb
+│   └── VGG16_model.ipynb
+|
+├── .gitignore
+├── CONTRIBUTING.md
+├── LICENSE.md
+├── README.md
+├── final_notebook.ipynb
+├── final_presentation.pdf
+└── 
+```
 
 
