@@ -36,7 +36,7 @@ The data comes in two types of files. There is a folder of images and 3 tsv file
 * Moving to the cloud to take advantage of accelerated hardware used for transfer learning CNN models built on pre-trained CNN architectures. 
 * Selecting final model and creating an app that will predict the disaster type based on an image scraped from Twitter
 
-### Exploratory Data Analysis and Feature Engineering 
+### Exploratory Data Analysis
 ![title](images/classes_count.png)
 
 The chart above shows the count of images for each of the classes. There looks to be a good amount of training images for all 7 classes. However, there does look to be a class imbalance, especially with the Not Disaster images having considerably more images. I will deal with this by experimenting with adding weights to the CNN models I train.
@@ -44,6 +44,58 @@ The chart above shows the count of images for each of the classes. There looks t
 ![title](images/distribution_splits.png)
 
 I created the above charts just to visually inspect the images counts across each folder. The train, validation and test folders look to have the same distribution of images over each class. The train/validation/test splits for these images are 70/10/20 respectively.
+
+![title](images/sample_images.png)
+
+Above you can see a sample image for each class from the train folder after it has been re-scaled. All the images came in a lot of different sizes but it is important to rescale to the same range between 0 and 1 because it will make images easier to work with during the modeling process. You can see there is a lot of noise in these images, which will make it even harder to train on, so I may need to take advantage of transfer learning. 
+
+### Model Creation and Evaluation
+
+After preprocessing the images, I performed a baseline CNN model. Below is the confusion matirx output for the first model. This model did not do well. It basically predicted all to the majority class, not_disaster. With an accuracy score of 34, that is better than a random guess, but I think the model can be improved a lot. 
+
+![title](images/FSM_confusion.png)
+
+Next, I iterated on the baseline model by tweaking paramters. In this model,I added dropout layers to reduce overfitting, decreased learning rate from .001 to .0001, and added class weights to account for imbalanced classes. As you can see by the confusion matrix below, this model did not do any better, with an accuracy of 31%. 
+
+![title](images/2ndModel_confusion.png)
+
+### Moveing to the could and transfer learning
+
+At this point I did not want to run any more models on my machine because they were taking too long to train. I decided to get a Google Colab Pro account which aloud me to access cloud GPUs with 32GB of ram compared to the 8GB of ram on my computer. The below three models were run with Colab and saved in the "transfer_learning_models" folder in the repo if you wan to see the code behind them. 
+
+![title](images/vgg_confusion.png)
+
+![title](images/resnet_confusion.png)
+
+![title](images/dense_confusion.png)
+
+![title](images/dense_training_loss.png)
+
+
+### Web Application
+
+Insert picture of application
+
+### Conclusions
+
+**Transfer learning performs better.** By using models that have been pre trained on millions of images, it not only speeds up the compute time, but accuracy improves considerably over a baseline CNN model built from scratch. 
+
+**Consider using the final model in real applications** I showed in the demonstration that this model coulsd be used to predict images that are scraped from twitter by users who upload phots of natural disasters as they happen so FEMA can augment data they are receiving about the disaster. 
+
+**Consider other use cases**This model would work well with other forms of social media, not just twitter, like I showed. Any place where users are uploading photos of disasters is a good place to classify the image to get more information. 
+
+### Next Steps
+
+**Incorporate real time image scraping** While I can upload an image manually, it would be nice to autamate the app to scrape twitter at various intervals throughout the day and automatically detect natrual disasters quicker. 
+
+**Perform more tasks on the images** This can be done by classifying images as informative/not informative, and classify severity as severe, mild, or little to none.
+
+**Implement other cloud based modeling** I would like to run these models using even more GPUs on other cloud providers to see if I can speed up training on the larger models.
+
+**Gather more images** There were a good amount of images for this project, but it would be nice to get even more unique images. Natural disasters happen every year, so it would be nice to update the model with pictures of more recent natural disasters.  
+
+
+
 
 
 
