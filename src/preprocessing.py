@@ -11,6 +11,7 @@ import warnings
 # #For dividing the images into correct folders
 import shutil
 
+
 def image_divider(data, split_type):
 
     '''This function divides the images into 
@@ -30,3 +31,5 @@ def image_divider(data, split_type):
         #Loop thorugh the image path column and copy over the new data to the destination folder
         for source in new_dataset['image_path']:
             shutil.copy(source, destination)
+
+    
