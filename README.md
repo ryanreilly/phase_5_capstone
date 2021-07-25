@@ -71,6 +71,15 @@ At this point I did not want to run any more models on my machine because they w
 
 ![title](images/dense_training_loss.png)
 
+### Model Comparison
+
+| Model | Testing Accuracy|
+|:-------| :-------|
+|Baseline CNN| 34%|
+|Baseline CNN - Tuned| 31%|
+|Resnet50| 46%|
+|VGG16| 56%|
+|Final Model - DenseNet121| 56%|
 
 ### Web Application
 
