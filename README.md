@@ -109,6 +109,16 @@ Insert picture of application
 
 **Gather more images** There were a good amount of images for this project, but it would be nice to get even more unique images. Natural disasters happen every year, so it would be nice to update the model with pictures of more recent natural disasters.  
 
+### For More Information:
+Please review my full analysis in the [Final Notebook](./final_notebook.ipynb), [Transfer Learning Notebooks](./transfer_learning_notebooks.ipynb), [Images](./images), or the [Presentation](./final_presentation.pdf)
+
+For any additional questions, please contact me:
+
+Ryan Reilly: 
+Email: ryan.m.reilly@gmail.com
+Github: https://github.com/ryanreilly
+Linkedin: https://www.linkedin.com/in/ryanreilly1/
+
 
 ### Repo Structure
 ```
