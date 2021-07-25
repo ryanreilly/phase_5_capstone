@@ -1,7 +1,6 @@
 # Natrual Disaster Classification
 
 **Author:** Ryan Reilly
-
 ![title](images/disaster_1.jpeg)
 
 ## Overview
@@ -28,3 +27,23 @@ The data comes in two types of files. There is a folder of images and 3 tsv file
 |image_id| Unique ID for each image|
 |image_path| Folder structure path of where the image is stored|
 |class_label|Disaster type|
+
+### Methods
+
+* Preliminary exploratory data analysis to identify the distribution of images across the disaster type classes, the outcome we are trying to predict
+* Preprocessing images by rescaling and and passing in data augmentation parameters to be used for modeling
+* Building and evaluating model performance for a baseline CNN model
+* Moving to the cloud to take advantage of accelerated hardware used for transfer learning CNN models built on pre-trained CNN architectures. 
+* Selecting final model and creating an app that will predict the disaster type based on an image scraped from Twitter
+
+### Exploratory Data Analysis and Feature Engineering 
+![title](images/classes_count.png)
+
+The chart above shows the count of images for each of the classes. There looks to be a good amount of training images for all 7 classes. However, there does look to be a class imbalance, especially with the Not Disaster images having considerably more images. I will deal with this by experimenting with adding weights to the CNN models I train.
+
+![title](images/distribution_splits.png)
+
+I created the above charts just to visually inspect the images counts across each folder. The train, validation and test folders look to have the same distribution of images over each class. The train/validation/test splits for these images are 70/10/20 respectively.
+
+
+
