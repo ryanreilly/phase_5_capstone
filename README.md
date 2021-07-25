@@ -1,4 +1,4 @@
-# Natrual Disaster Classification
+# Natrual Disaster Image Classification
 
 **Author:** Ryan Reilly
 ![title](images/disaster_1.jpeg)
