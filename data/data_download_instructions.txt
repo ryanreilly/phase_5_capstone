@@ -1,0 +1,43 @@
+The data for this project was too large to push to the Git repo so below is more info on how to gather the data. 
+
+1. Click the following link and the data will start downloading:https://crisisnlp.qcri.org/data/crisis_image_datasets_benchmarks/data_disaster_types.tar.gz
+
+2. In this download, you will get three .tsv files which I have put in the data folder to give you an idea of how they look. 
+   They reference the file paths of all the images along with the disaster type label which is what we are trying to predict. 
+   You will also get all the images in an image folder, called data. The path of each image has one of the two structures below:
+
+   ├── data
+       └── aidr_disaster_types
+           └── the name of the disaster
+               └── the date of the photo
+                   ├── image
+                   ├── image
+                   ├── image...
+   
+
+   ├── data
+       └── multimodal-deep-learning-disaster-response-mouzannar
+           └── multimodal
+               ├── damaged_infrastructure
+                   └── images
+                       ├──image
+               ├── damaged_nature
+                   └── images
+                       ├──image
+               ├── fires
+                   └── images
+                       ├──image
+               ├── flood
+                   └── images
+                       ├──image
+               ├── human_damage
+                   └── images
+                       ├──image
+               ├── non_damage
+                   └── images
+                       ├──image
+               ├── flood
+                   └── images
+                       ├──image
+ 
+ 3. Finally, to get the images in a folder staructure to work with Keras and Tensorflow, use my image_divider notebook to see how this is done. 
