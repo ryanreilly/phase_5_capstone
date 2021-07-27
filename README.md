@@ -89,7 +89,9 @@ Final Model - DenseNet121
 
 ### Web Application
 
-Insert picture of application
+The below link will take you to a web application I built using Streamlit and deployed on Heroku. It is a simple app to upload a picture and it will classify the natural disaster type.
+
+https://nd-prediction.herokuapp.com/
 
 ### Conclusions
 
@@ -125,9 +127,8 @@ Linkedin: https://www.linkedin.com/in/ryanreilly1/
 ├── data
 │   ├── consolidated_disaster_types_dev_final.tsv
 │   ├── consolidated_disaster_types_test_final.tsv
-│   ├── consolidated_disaster_types_train_final.tsv
-│   └── 
-|
+│   └──  consolidated_disaster_types_train_final.tsv
+│
 ├── images
 │   ├── disaster_1.jpeg
 │   ├── classes_count.png
