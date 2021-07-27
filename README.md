@@ -59,7 +59,7 @@ Next, I iterated on the baseline model by tweaking paramters. In this model,I ad
 
 ![title](images/2ndModel_confusion.png)
 
-### Moveing to the could and transfer learning
+### Moving to the cloud using Google Colab and transfer learning
 
 At this point I did not want to run any more models on my machine because they were taking too long to train. I decided to get a Google Colab Pro account which aloud me to access cloud GPUs with 32GB of ram compared to the 8GB of ram on my computer. The below three models were run with Colab and saved in the "transfer_learning_models" folder in the repo if you wan to see the code behind them. 
 
