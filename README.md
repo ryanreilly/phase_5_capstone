@@ -127,7 +127,8 @@ Linkedin: https://www.linkedin.com/in/ryanreilly1/
 ├── data
 │   ├── consolidated_disaster_types_dev_final.tsv
 │   ├── consolidated_disaster_types_test_final.tsv
-│   └──  consolidated_disaster_types_train_final.tsv
+│   ├── consolidated_disaster_types_train_final.tsv
+│   └── data_download_instructions.txt
 │
 ├── images
 │   ├── disaster_1.jpeg
