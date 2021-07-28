@@ -170,9 +170,8 @@ Linkedin: https://www.linkedin.com/in/ryanreilly1/
 ├── CONTRIBUTING.md
 ├── LICENSE.md
 ├── README.md
-├── final_notebook.ipynb
-├── final_presentation.pdf
-└── 
+├── final_technical_notebook.ipynb
+└── final_presentation.pdf
 ```
 
 
